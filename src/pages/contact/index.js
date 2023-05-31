@@ -33,7 +33,8 @@ export const ContactUs = () => {
         contactConfig.YOUR_SERVICE_ID,
         contactConfig.YOUR_TEMPLATE_ID,
         templateParams,
-        contactConfig.YOUR_USER_ID
+        '18cXJfPo7eJx6EfuL',
+        // contactConfig.YOUR_USER_ID
       )
       .then(
         (result) => {
@@ -78,6 +79,7 @@ export const ContactUs = () => {
             <hr className="t_border my-4 ml-0 text-left" />
           </Col>
         </Row>
+        
         <Row className="sec_sp">
           <Col lg="12">
             <Alert
