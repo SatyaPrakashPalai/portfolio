@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import * as emailjs from "emailjs-com";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
@@ -7,6 +7,8 @@ import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
 
 export const ContactUs = () => {
+
+  const inputRef = useRef("")
   const [formData, setFormdata] = useState({
     email: "",
     name: "",
@@ -20,6 +22,7 @@ export const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormdata({ loading: true });
+    inputRef.current.value = ""
 
     const templateParams = {
       from_name: formData.email,
@@ -150,6 +153,7 @@ export const ContactUs = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
+                ref={inputRef}
               ></textarea>
               <br />
               <Row>
