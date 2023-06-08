@@ -73,7 +73,7 @@ const dataportfolio = [
     img: "/projects/tinder-clone.png",
     name: "Tinder Clone",
     dev: "Web development",
-    link: "https://tinder-frontend-eight.vercel.app/",
+    link: "https://tinder-frontend-eight.vercel.app/signup",
   },
   {
     img: "/projects/goodway.png",
